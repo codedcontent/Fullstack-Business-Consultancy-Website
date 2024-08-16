@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
   };
 
   const mailOptions = {
-    from: `"${sanitizedData.name}" <${sanitizedData.email}>`,
+    from: `"${sanitizedData.name}" <${process.env.SMTP_USER}>`,
     to: process.env.RECEIVING_EMAIL,
     subject: "New Contact Form Submission",
     text: `
@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
       Budget: ${sanitizedData.budget}
       Work Link: ${sanitizedData.workLink}
     `,
+    replyTo: sanitizedData.email,
   };
 
   try {
