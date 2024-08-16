@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
@@ -22,7 +23,15 @@ const Navbar = (props: Props) => {
   return (
     <nav className="lg:px-20 md:px-10 px-5 md:py-5 py-3.5 flex items-center justify-between sticky top-0 z-50 bg-dark/90">
       {/* Logo */}
-      <Link href={"/"}>
+      <Link href={"/"} className="flex gap-2 justify-center items-center">
+        <Image
+          src={"/images/logo_only-removebg-preview.png"}
+          alt="Alex Web Tech"
+          height={500}
+          width={500}
+          className="h-10 w-10"
+        />
+
         <span className="md:text-xl text-lg text white font-black">
           ALEX WEB TECH
         </span>

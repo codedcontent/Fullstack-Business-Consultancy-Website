@@ -6,8 +6,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { HiMiniCheckBadge } from "react-icons/hi2";
 import { MdSavings } from "react-icons/md";
 
-// TODO: Add CTA buttons to each section
-
 export default function Home() {
   const SocialProof = (props: { num: number; activity: string }) => {
     return (
