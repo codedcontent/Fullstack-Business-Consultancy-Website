@@ -13,6 +13,35 @@ export const metadata: Metadata = {
   title: "Alex Web Tech",
   description:
     "Alex Web Tech offers stunning, budget-friendly websites designed to boost your business's online presence. With over 4 years of experience and 100+ successful projects, we create professional sites that set you apart from the competition. Contact us today for a free consultation!",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Business", "Small Business", "Need website", "Need website UK"],
+  authors: [
+    { name: "Ogechukwu" },
+    { name: "Mephors", url: "https://ogemeph.vercel.app" },
+  ],
+  creator: "Ogechukwu Mephors",
+  publisher: "Ogechukwu Mephors",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Alex Web Tech",
+    description:
+      "Alex Web Tech offers stunning, budget-friendly websites designed to boost your business's online presence. With over 4 years of experience and 100+ successful projects, we create professional sites that set you apart from the competition. Contact us today for a free consultation!",
+    url: "https://alexwebtech.co.uk",
+    siteName: "Alex Web Tech",
+    images: [
+      {
+        url: "https://www.alexwebtech.co.uk/_next/image?url=%2Fimages%2Foffice%20hero%20img.jpg&w=1080&q=75", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

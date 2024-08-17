@@ -43,7 +43,7 @@ export default function Home() {
       {/* Hero Image Section */}
       <div className="w-full h-screen flex lg:flex-row flex-col items-center">
         {/* Heading */}
-        <div className="flex flex-col lg:gap-y-6 gap-y-3 lg:w-2/5 w-full">
+        <div className="flex flex-col lg:gap-y-6 gap-y-3 lg:w-2/5 w-full z-50">
           <p className="md:text-6xl text-4xl">
             Stunning,{" "}
             <span className="font-bold text-primary">
@@ -71,7 +71,7 @@ export default function Home() {
             alt="Alex Web Tech"
             width={500}
             height={500}
-            className="object-cover w-full h-48"
+            className="object-cover lg:w-[500px] w-[500px] lg:h-fit h-48"
           />
 
           <div className="lg:py-14 py-5 bg-[#252836] w-max lg:px-14 px-5 flex flex-col justify-center items-start lg:gap-10 gap-6">
