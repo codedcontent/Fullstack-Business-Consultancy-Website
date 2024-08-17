@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${poppins.className} relative`}>
         <Navbar />
 
-        <div className="px-20">{children}</div>
+        <div className="lg:px-20 md:px-10 px-5">{children}</div>
 
         <Footer />
       </body>

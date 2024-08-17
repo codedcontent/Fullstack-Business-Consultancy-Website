@@ -10,8 +10,10 @@ export default function Home() {
   const SocialProof = (props: { num: number; activity: string }) => {
     return (
       <div className="flex flex-col justify-center items-start">
-        <span className="text-3xl">{props.num}+</span>
-        <span className="font-extralight w-5/6 text-sm">{props.activity}</span>
+        <span className="lg:text-3xl text-lg">{props.num}+</span>
+        <span className="font-extralight lg:w-5/6 w-full lg:text-sm text-xs">
+          {props.activity}
+        </span>
       </div>
     );
   };
@@ -22,12 +24,12 @@ export default function Home() {
     text: string;
   }) => {
     return (
-      <div className="flex justify-center items-center gap-5">
-        <div className=" rounded-full text-primary p-2 flex justify-center items-center">
+      <div className="flex justify-center items-center lg:gap-5 gap-2.5">
+        <div className=" rounded-full text-primary lg:p-2 p-1 flex justify-center items-center">
           <props.icon className="h-8 w-8" />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col lg:gap-2 gap-1">
           <p className="font-bold">{props.h1}</p>
 
           <p className="font-extralight text-sm">{props.text}</p>
@@ -37,12 +39,12 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full scroll-smooth">
+    <main className="w-full scroll-smooth m-auto">
       {/* Hero Image Section */}
-      <div className="w-full h-screen flex items-center">
+      <div className="w-full h-screen flex lg:flex-row flex-col items-center">
         {/* Heading */}
-        <div className="flex flex-col gap-y-6 w-2/5">
-          <p className="text-6xl">
+        <div className="flex flex-col lg:gap-y-6 gap-y-3 lg:w-2/5 w-full">
+          <p className="md:text-6xl text-4xl">
             Stunning,{" "}
             <span className="font-bold text-primary">
               budget-friendly websites
@@ -50,29 +52,29 @@ export default function Home() {
             for your business
           </p>
 
-          <p className="font-extralight">
+          <p className="font-extralight md:text-base text-sm">
             Without a website, you're just a{" "}
             <span className="text-primary">want-repreneur</span>. Get a website
             and become an entrepreneur today.
           </p>
 
           <a href="contact">
-            <button className="text-[#453A34] bg-primary px-10 py-3 font-bold w-max uppercase">
+            <button className="text-[#453A34] bg-primary md:px-10 px-5 md:py-3 py-1.5 font-bold w-max uppercase md:text-base text-sm">
               Yes, I want this!
             </button>
           </a>
         </div>
 
-        <div className="absolute right-0 flex justify-center items-center">
+        <div className="lg:absolute right-0 flex lg:flex-row flex-col justify-center items-center lg:mt-0 mt-4 lg:w-max w-[80%]">
           <Image
             src={"/images/office hero img.jpg"}
             alt="Alex Web Tech"
             width={500}
             height={500}
-            className="object-cover"
+            className="object-cover w-full h-48"
           />
 
-          <div className="py-14 bg-[#252836] w-max px-14 flex flex-col justify-center items-start gap-10">
+          <div className="lg:py-14 py-5 bg-[#252836] w-max lg:px-14 px-5 flex flex-col justify-center items-start lg:gap-10 gap-6">
             <SocialProof num={4} activity="Years of experience" />
             <SocialProof num={100} activity="Complete projects and portfolio" />
             <SocialProof num={50} activity="Happy clients" />
@@ -81,7 +83,7 @@ export default function Home() {
       </div>
 
       {/* Brand associations section */}
-      <div className="w-full py-5 flex justify-between items-center">
+      <div className="w-full lg:py-5 py-2.5 flex justify-between items-center flex-wrap">
         {/* <Image
           src={"/images/apple-logo.png"}
           height={100}
@@ -140,22 +142,22 @@ export default function Home() {
       </div>
 
       {/* Why a website? */}
-      <div className="w-full py-10 flex flex-col items-center justify-center">
-        <h1 className="text-5xl text-center font-bold">
+      <div className="w-full lg:py-10 py-5 flex flex-col items-center justify-center">
+        <h1 className="lg:text-5xl text-2xl text-center font-bold">
           Why do I need a website?
         </h1>
 
-        <div className="grid grid-cols-3 gap-20 mt-10 max-w-5xl m-auto">
-          <div className="flex flex-col gap-2 w-full justify-center items-center">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-20 gap-10 lg:mt-10 mt-5 lg:max-w-5xl max-w-sm m-auto">
+          <div className="flex flex-col lg:gap-2 gap-1 w-full justify-center items-center">
             <Image
               src={"/images/undraw_stand_out_-1-oag.svg"}
               width={500}
               height={500}
               alt="why do I need a website?"
-              className="h-52 w-52"
+              className="h-36 w-36"
             />
 
-            <div className="flex flex-col gap-3 text-center">
+            <div className="flex flex-col lg:gap-3 gap-1.5 text-center">
               <p className="capitalize text-lg text-primary">
                 where are you among the millions?
               </p>
@@ -171,16 +173,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 w-full justify-center items-center">
+          <div className="flex flex-col lg:gap-2 gap-1 w-full justify-center items-center">
             <Image
               src={"/images/undraw_both_sides_hbv3.svg"}
               width={500}
               height={500}
               alt="why do I need a website?"
-              className="h-52 w-52"
+              className="h-36 w-36"
             />
 
-            <div className="flex flex-col gap-3 text-center">
+            <div className="flex flex-col lg:gap-3 gap-1.5 text-center">
               <p className="capitalize text-lg text-primary">
                 Are you just playing with online trends?
               </p>
@@ -198,18 +200,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 w-full justify-center items-center">
+          <div className="flex flex-col lg:gap-2 gap-1 w-full justify-center items-center">
             <Image
               src={"/images/undraw_website_ij0l.svg"}
               width={500}
               height={500}
               alt="why do I need a website?"
-              className="h-52 w-52"
+              className="h-36 w-36"
             />
 
-            <div className="flex flex-col gap-3 text-center">
+            <div className="flex flex-col lg:gap-3 gap-1.5 text-center">
               <p className="capitalize text-lg text-primary">
-                Are you just playing with online trends?
+                Look the part with the right tools
               </p>
 
               <div className="space-y-4">
@@ -235,9 +237,9 @@ export default function Home() {
           /> */}
         </div>
 
-        <a href="contact">
-          <button className="text-[#453A34] bg-primary px-10 py-3 font-bold w-max uppercase mt-10">
-            Yes, I want one!
+        <a href="contact" className="lg:mt-10 mt-5">
+          <button className="text-[#453A34] bg-primary md:px-10 px-5 md:py-3 py-1.5 font-bold w-max uppercase md:text-base text-sm">
+            Yes, I want this!
           </button>
         </a>
       </div>
@@ -245,19 +247,19 @@ export default function Home() {
       {/* How are we different? */}
       <div
         id="why"
-        className="w-full py-10 flex flex-col items-center justify-center"
+        className="w-full lg:py-10 py-5 flex flex-col items-center justify-center"
       >
-        <h1 className="text-5xl mt-10 text-center font-bold">
+        <h1 className="lg:text-5xl text-xl lg:mt-10 mt-5 text-center font-bold">
           How are we different?
         </h1>
 
-        <div className="flex gap-20 mt-10 max-w-5xl m-auto justify-center items-center">
+        <div className="flex lg:flex-row flex-col lg:gap-20 md:10 gap-2.5 lg:mt-10 mt-5 lg:max-w-5xl max-w-sm m-auto justify-center items-center">
           <Image
             src={"/images/blue-figure-stands-out-crowd-red-men.jpg"}
             width={500}
             height={500}
             alt="How is alex web tech different?"
-            className="h-[550px] bg-cover rounded-xl"
+            className="lg:h-[550px] h-56 bg-cover rounded-xl"
           />
 
           <div className="w-full">
@@ -266,7 +268,7 @@ export default function Home() {
               not the others?
             </p>
 
-            <div className="mt-5 space-y-8">
+            <div className="lg:mt-5 mt-2.5 lg:space-y-8 space-y-4">
               <HowWeAreDifferent
                 icon={GiStumpRegrowth}
                 h1="We Get the Entrepreneur Hustle"
@@ -296,15 +298,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Contact Us */}
-
-      <div className="w-full pt-10 mb-40 flex flex-col justify-between items-center">
-        <h1 className="text-5xl text-center font-bold w-1/2">
+      {/* Free consult */}
+      <div className="w-full lg:pt-10 pt-5 flex flex-col justify-between items-center">
+        <h1 className="lg:text-5xl md:text-3xl text-xl text-center font-bold w-1/2">
           Contact us for a free consultation
         </h1>
 
         <a href="contact">
-          <button className="text-[#453A34] rounded-md bg-primary px-10 mt-10 py-3 font-bold w-max uppercase">
+          <button className="text-[#453A34] rounded-md bg-primary lg:px-10 px-5 lg:mt-10 mt-5 lg:py-3 py-1.5 font-bold w-max uppercase lg:text-base text-sm">
             Get the free consultation
           </button>
         </a>

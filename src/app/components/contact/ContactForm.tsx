@@ -99,10 +99,13 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="w-full mx-auto p-6">
-      <div className="flex w-full gap-10">
+      <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-5">
         {/* Name and Email */}
-        <div className="w-full mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
+        <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
+          <label
+            className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
+            htmlFor="name"
+          >
             Name *
           </label>
 
@@ -119,8 +122,11 @@ const ContactForm = () => {
           )}
         </div>
 
-        <div className="w-full mb-4">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+        <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
+          <label
+            className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
+            htmlFor="email"
+          >
             Email *
           </label>
 
@@ -139,10 +145,10 @@ const ContactForm = () => {
       </div>
 
       {/* Company name and phone number */}
-      <div className="flex w-full gap-10">
-        <div className="w-full mb-4">
+      <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-5">
+        <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
             htmlFor="companyName"
           >
             Company Name *
@@ -161,9 +167,9 @@ const ContactForm = () => {
           )}
         </div>
 
-        <div className="w-full mb-4">
+        <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
             htmlFor="phoneNumber"
           >
             Phone Number
@@ -181,9 +187,9 @@ const ContactForm = () => {
       </div>
 
       {/* Most important question */}
-      <div className="w-full mb-4">
+      <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
         <label
-          className="block text-gray-700 font-bold mb-2"
+          className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
           htmlFor="importantQuestion"
         >
           What is your most important question? *
@@ -204,9 +210,9 @@ const ContactForm = () => {
       </div>
 
       {/* How'd you find us */}
-      <div className="w-full mb-4">
+      <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
         <label
-          className="block text-gray-700 font-bold mb-2"
+          className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
           htmlFor="howDidYouFindUs"
         >
           How did you find us?
@@ -223,8 +229,11 @@ const ContactForm = () => {
       </div>
 
       {/* What is your budget */}
-      <div className="w-full mb-4">
-        <label className="block text-gray-700 font-bold mb-2" htmlFor="budget">
+      <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
+        <label
+          className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
+          htmlFor="budget"
+        >
           What is your budget?
         </label>
 
@@ -239,9 +248,9 @@ const ContactForm = () => {
       </div>
 
       {/* Link to your current work */}
-      <div className="w-full mb-4">
+      <div className="w-full lg:mb-4 mb-2 lg:gap-2 gap-1">
         <label
-          className="block text-gray-700 font-bold mb-2"
+          className="block text-gray-700 font-bold lg:text-base text-sm mb-2"
           htmlFor="workLink"
         >
           Link to your current work
@@ -257,10 +266,10 @@ const ContactForm = () => {
         />
       </div>
 
-      <div className="w-full mt-10">
+      <div className="w-full lg:mt-10 mt-5">
         <button
           type="submit"
-          className="text-[#453A34] bg-primary px-10 py-3 font-bold w-full uppercase hover:bg-primary/80 hover:text-white"
+          className="text-[#453A34] bg-primary lg:px-10 px-5 lg:mt-10 mt-5 lg:py-3 py-1.5 font-bold w-full uppercase hover:bg-primary/80 hover:text-white"
         >
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>

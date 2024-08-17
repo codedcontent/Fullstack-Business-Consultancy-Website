@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
+import { IoCloseCircle } from "react-icons/io5";
 
 type Props = {};
 
@@ -62,10 +63,17 @@ const Navbar = (props: Props) => {
       </div>
 
       {/* Nav - Small Screen */}
-      <FaHamburger
-        className="text-white text-xl block md:hidden"
-        onClick={toggleMenu}
-      />
+      {isNavOpen ? (
+        <IoCloseCircle
+          className="text-white text-xl block md:hidden"
+          onClick={toggleMenu}
+        />
+      ) : (
+        <FaHamburger
+          className="text-white text-xl block md:hidden"
+          onClick={toggleMenu}
+        />
+      )}
 
       {isNavOpen && (
         <div
