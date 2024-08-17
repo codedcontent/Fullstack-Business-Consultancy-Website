@@ -9,6 +9,8 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+const logoPath = "/images/Alex Web Tech.png";
+
 export const metadata: Metadata = {
   title: "Alex Web Tech",
   description:
@@ -34,7 +36,8 @@ export const metadata: Metadata = {
     siteName: "Alex Web Tech",
     images: [
       {
-        url: "https://www.alexwebtech.co.uk/_next/image?url=%2Fimages%2Foffice%20hero%20img.jpg&w=1080&q=75", // Must be an absolute URL
+        // url: "https://www.alexwebtech.co.uk/_next/image?url=%2Fimages%2Foffice%20hero%20img.jpg&w=1080&q=75",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}${logoPath}`,
         width: 400,
         height: 400,
       },
