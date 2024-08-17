@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.alexwebtech.co.uk/_next/image?url=%2Fimages%2Foffice%20hero%20img.jpg&w=1080&q=75", // Must be an absolute URL
-        width: 800,
-        height: 600,
+        width: 400,
+        height: 400,
       },
     ],
     locale: "en_US",
