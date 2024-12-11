@@ -39,11 +39,11 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full scroll-smooth m-auto">
+    <main className="w-full scroll-smooth m-auto z-10">
       {/* Hero Image Section */}
       <div className="w-full h-screen flex lg:flex-row flex-col items-center">
         {/* Heading */}
-        <div className="flex flex-col lg:gap-y-6 gap-y-3 lg:w-2/5 w-full z-50">
+        <div className="flex flex-col lg:gap-y-6 gap-y-3 lg:w-2/5 w-full z-10">
           <p className="md:text-6xl text-4xl">
             Stunning,{" "}
             <span className="font-bold text-primary">

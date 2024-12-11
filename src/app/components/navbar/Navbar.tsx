@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
   return (
     <nav className="lg:px-20 md:px-10 px-5 md:py-5 py-3.5 flex items-center justify-between sticky top-0 z-50 bg-dark/90">
       {/* Logo */}
-      <Link href={"/"} className="flex gap-2 justify-center items-center">
+      <Link href={"/"} className="flex gap-2 justify-center items-center z-50">
         <Image
           src={"/images/logo_only-removebg-preview.png"}
           alt="Alex Web Tech"
